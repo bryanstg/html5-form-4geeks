@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 and Bootstrap Form</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 
 </head>
 <body>
@@ -65,41 +65,46 @@
                                 <input type="text" class="form-control" id="inputPostalCode">
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="col-6">
-                            <div class="custom-control custom-radio custom-control-inline">
+                    <div class="form-row d-flex flex-row align-items-start justify-content-between">
+                        <div class="col-6 my-2 bg-secondary d-flex flex-row align-items-center" >
+                            <div class="custom-control custom-radio custom-control-inline d-flex fle-row align-items-center">
                                 <input type="radio" id="inputAmericanExpress" name="paymentMethods" class="custom-control-input">
                                 <label class="custom-control-label" for="inputAmericanExpress">
-                                    <img class="" src="/styles/image/american.png" alt="American Express">
+                                    <img class="rounded mx-1 cardImg" src="/styles/image/american.png" alt="American Express">
                                 </label>
                             </div>
-                            <div class="custom-control custom-radio custom-control-inline">
+                            <div class="custom-control custom-radio custom-control-inline d-flex flex-row align-items-center">
                                 <input type="radio" id="inputMastercard" name="paymentMethods" class="custom-control-input">
                                 <label class="custom-control-label" for="inputMastercard">
-                                    <img class="" src="/styles/image/mastercard.png" alt="Mastercard">
+                                    <img class="cardImg" src="/styles/image/mastercard.png" alt="Mastercard">
                                 </label>
                             </div>
-                            <div class="custom-control custom-radio custom-control-inline">
+                            <div class="custom-control custom-radio custom-control-inline d-flex flex-row align-items-center">
                                 <input type="radio" id="inputPaypal" name="paymentMethods" class="custom-control-input">
                                 <label class="custom-control-label" for="inputPaypal">
-                                    <img class="" src="/styles/image/paypal.png" alt="Paypal">
+                                    <img class="cardImg" src="/styles/image/paypal.png" alt="Paypal">
                                 </label>
                             </div>
-                            <div class="custom-control custom-radio custom-control-inline">
+                            <div class="custom-control custom-radio custom-control-inline d-flex flex-row align-items-center">
                                 <input type="radio" id="inputVisa" name="paymentMethods" class="custom-control-input">
                                 <label class="custom-control-label" for="inputVisa">
-                                    <img class="" src="/styles/image/visa.png" alt="Visa">
+                                    <img class="cardImg" src="/styles/image/visa.png" alt="Visa">
                                 </label>
                             </div> 
 
                         </div>
                         <div class="col-6">
-
+                            <label for="trxtAreaForm">Message</label>
+                            <textarea class="form-control" id="textAreaForm" rows="3"></textarea>
                         </div>
                     </div>
-                    <div class=" ">
-                        <button class="btn btn-secondary" type="submit">Cancel</button>
-                        <button class="btn btn-primary" type="submit">Send</button>
+                    <div class="row">
+                        
+                        <div class="col d-flex flex-row-reverse">
+                            <button class="btn btn-primary mx-2" type="submit">Send</button>
+                            <button class="btn btn-secondary mx-2" type="submit">Cancel</button>
+                            
+                        </div>
                     </div>
                 </form>
             </div>
