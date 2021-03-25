@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 and Bootstrap Form</title>
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/styles.css">
 
@@ -13,11 +14,13 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <form action="">
+                <form action="POST">
+                    <!-- Title and alert -->
                     <h2>Payment form example</h2>
                     <div class="alert alert-danger" role="alert">
                         Some fields are missing
                     </div>
+
                     <!-- Card info -->
                     <div class="form-row">
                         <div class="form-group col-5">
@@ -47,8 +50,8 @@
                         </div>
                     </div>
 
-                    <!--  -->
-                    <div class="form-row">
+                    <!-- Location -->
+                    <div class="form-row my-3">
                         <div class="col-6">
                                 <label for="inputCity">City</label>
                                 <input type="text" class="form-control" id="inputCity">
@@ -65,31 +68,35 @@
                                 <input type="text" class="form-control" id="inputPostalCode">
                         </div>
                     </div>
-                    <div class="form-row d-flex flex-row align-items-start justify-content-between">
-                        <div class="col-6 my-2 bg-secondary d-flex flex-row align-items-center" >
-                            <div class="custom-control custom-radio custom-control-inline d-flex fle-row align-items-center">
-                                <input type="radio" id="inputAmericanExpress" name="paymentMethods" class="custom-control-input">
-                                <label class="custom-control-label" for="inputAmericanExpress">
-                                    <img class="rounded mx-1 cardImg" src="/styles/image/american.png" alt="American Express">
-                                </label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline d-flex flex-row align-items-center">
-                                <input type="radio" id="inputMastercard" name="paymentMethods" class="custom-control-input">
-                                <label class="custom-control-label" for="inputMastercard">
-                                    <img class="cardImg" src="/styles/image/mastercard.png" alt="Mastercard">
-                                </label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline d-flex flex-row align-items-center">
-                                <input type="radio" id="inputPaypal" name="paymentMethods" class="custom-control-input">
-                                <label class="custom-control-label" for="inputPaypal">
-                                    <img class="cardImg" src="/styles/image/paypal.png" alt="Paypal">
-                                </label>
-                            </div>
-                            <div class="custom-control custom-radio custom-control-inline d-flex flex-row align-items-center">
-                                <input type="radio" id="inputVisa" name="paymentMethods" class="custom-control-input">
-                                <label class="custom-control-label" for="inputVisa">
-                                    <img class="cardImg" src="/styles/image/visa.png" alt="Visa">
-                                </label>
+
+                    <!-- Payment methods -->
+                    <div class="form-row my-3 d-flex flex-row align-items-start justify-content-between">
+                        <div class="col-6 " >
+                            <div class="col-6 my-2 py-2 bg-secondary d-flex flex-row align-items-center rounded">
+                                <div class="custom-control custom-radio custom-control-inline d-flex fle-row align-items-center">
+                                    <input type="radio" id="inputAmericanExpress" name="paymentMethods" class="custom-control-input">
+                                    <label class="d-flex align-items-center custom-control-label" for="inputAmericanExpress">
+                                        <img class="rounded mx-1 cardImg" src="./styles/image/american.png" alt="American Express" width="20" height="20">
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline d-flex flex-row align-items-center">
+                                    <input type="radio" id="inputMastercard" name="paymentMethods" class="custom-control-input">
+                                    <label class="d-flex align-items-center custom-control-label" for="inputMastercard">
+                                        <img class="cardImg" src="./styles/image/mastercard.png" alt="Mastercard" width="20" height="20">
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline d-flex flex-row align-items-center">
+                                    <input type="radio" id="inputPaypal" name="paymentMethods" class="custom-control-input">
+                                    <label class="d-flex align-items-center custom-control-label" for="inputPaypal">
+                                        <img class="cardImg" src="./styles/image/paypal.png" alt="Paypal" width="20" height="20">
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline d-flex flex-row align-items-center">
+                                    <input type="radio" id="inputVisa" name="paymentMethods" class="custom-control-input">
+                                    <label class="d-flex align-items-center custom-control-label" for="inputVisa">
+                                        <img class="cardImg" src="./styles/image/visa.png" alt="Visa" width="20" height="20">
+                                    </label>
+                                </div>
                             </div> 
 
                         </div>
@@ -98,9 +105,11 @@
                             <textarea class="form-control" id="textAreaForm" rows="3"></textarea>
                         </div>
                     </div>
-                    <div class="row">
+
+                    <!-- Buttons  -->
+                    <div class="form-row my-3">
                         
-                        <div class="col d-flex flex-row-reverse">
+                        <div class="col  d-flex flex-row-reverse">
                             <button class="btn btn-primary mx-2" type="submit">Send</button>
                             <button class="btn btn-secondary mx-2" type="submit">Cancel</button>
                             
@@ -111,10 +120,7 @@
         </div>
     </div>
 
-
-
-
-
+    <!-- Bootstrap scripts -->
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
